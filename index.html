@@ -1,36 +1,52 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale = 1">
-    <title>My first web page</title>
-    <style>
-      p {
-        font-weight: bold;
-      }
-      footer {
-        margin-top: auto;
-        width: 100%;
-        text-align: center;
-        background-color: #0c6b68;
-      }
-    </style>
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
   </head>
-  <body style="background-color:#e5f8ff; font-family:Roboto Mono, monospace">
-    <a href="education.html">Education</a>
-    <h1 style="font-size: 50px">Athena Vo</h1>
-    <h2>Who I Am</h2>
-    Hi, I am Athena Vo. I am a second-year student at the University of Virginia. I am pursuing a major in Computer Science and a minor in Data Science. I like to code, journal, photograph, and travel! Keep reading to learn more about me.<br>
-    <img src="bbe1392f-34fb-46a8-a83b-c59a47b2a5ec.jpeg" height="152.9" width="229.5">
-    I am part of the Vietnamese Student Association @ UVA. I work to...
-    <ul>
-      <li>Engage, unite, and uplift the Vietnamese-American community at UVA</li>
-      <li>Serve the greater Vietnamese-American community in Virginia</li>
-      <li>Raise money for the Collective Philanthropy Project (CPP)</li>
-    </ul>
-    <footer>
-      <h2>Social Links</h2>
-      <p><i>Linkedin: <a href="https://www.linkedin.com/in/athena-vo/" target="_blank">athenavo</a></i></p>
-      <p><i>Email: gwb9pe@virginia.edu</i></p>
-      <p><i>Github: athena12341235</i></p>
-    </footer>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="#">Extracurriculars</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">CV</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1 style="font-size: 100px">Athena Vo</h1>
+          <p>BACS at the University of Virginia</p>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Headshot.jpg" width="496.98" height="331.36">
+          </div>
+          <div class="about-col-2">
+            <h1>About Me</h1>
+            <p>Hi, I am Athena Vo. I am a second-year student at the University of Virginia. I am pursuing a major in Computer Science and a minor in Data Science. I like to code, journal, photograph, and travel! Keep reading to learn more about me.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <h1>Contact Me</h1>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/athena-vo/" target="_blank"><img src="linkedin.svg"></i></a>Athena Vo
+            <a href="https://github.com/athena12341235" target="_blank"><img src="square-github.svg"></i></a>athena12341235
+            <a href=""><img src="envelope-solid.svg"></i></a>gwb9pe@virginia.edu
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

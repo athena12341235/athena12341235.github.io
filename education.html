@@ -3,12 +3,43 @@
   <body>
     <h1>This is my education page!</h1>
     <a href="index.html">Return to Home Page</a><br>
-    <img src="bbe1392f-34fb-46a8-a83b-c59a47b2a5ec.jpeg" height="152.9" width="229.5"><br>
+    <div id="carousel">
+      <div id="images">
+        <img src="E9C4B0AF-1133-4E27-9874-FF8D99438C3A.jpeg" width = "300" height = "400">
+        <img src="E1427BBC-988D-48E9-B969-CAFBBF89EE8E.jpeg" width = "300" height = "400">
+        <img src="EAF7DEDA-5956-4EF4-982C-8967AAD03428.jpeg" width = "300" height = "400">
+      </div>
+      <button class="Prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="Next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
     I am part of the Vietnamese Student Association @ UVA. I work to...
     <ul>
       <li>Engage, unite, and uplift the Vietnamese-American community at UVA</li>
       <li>Serve the greater Vietnamese-American community in Virginia</li>
       <li>Raise money for the Collective Philanthropy Project (CPP)</li>
     </ul>
+  <script>
+    let slideIndex = 0;
+    showSlide(slideIndex);
+
+    function moveSlide(n) {
+      showSlide(slideIndex += n);
+    }
+
+    function showSlide(n) {
+      let i;
+      let slides = document.getElementById("images").getElementsByTagName("img");
+      if (n >= slides.length) {
+        slideIndex = 0
+      }
+      if (n < 0) {
+        slideIndex = slides.length - 1
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
   </body>
 </html>

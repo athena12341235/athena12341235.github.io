@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>Exploring the DOM</h1>
+
+<h2>Count Down: <span id="count">20</span></h2>
+<button onclick="updateCount()">Next</button>
+
+<script>
+  var i = 20;
+  document.body.style.backgroundColor = 'rgb(255, 200, 200)';
+  function updateCount() {
+    i = i - 1;
+    countobj = document.getElementById("count");
+    console.log("Updating object: " + countobj);
+    countobj.innerHTML = "<b>" + i + "</b>";
+    var greenBlueIntensity = Math.max(0, Math.round((i / 20) * 200));
+    document.body.style.backgroundColor = `rgb(255, ${greenBlueIntensity}, ${greenBlueIntensity})`;
+    if (i === 0) {
+      document.body.innerHTML = '<div style="color: white; background-color: red; height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 48px;">BOOM!</div>';
+    }
+  }
+</script>
+</body>
+</html>
